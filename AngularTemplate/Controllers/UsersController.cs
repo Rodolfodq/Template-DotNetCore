@@ -1,4 +1,5 @@
 ﻿using AngularTemplate.Application.Interfaces;
+using AngularTemplate.Application.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,12 @@ namespace AngularTemplate.Controllers
         public IActionResult Get()
         {            
             return Ok(this.userService.Get());
+        }
+
+        [HttpPost]
+        public IActionResult Post(UserViewModel userViewModel)
+        {
+            return Ok(this.userService.Post(userViewModel));
         }
     }
 }

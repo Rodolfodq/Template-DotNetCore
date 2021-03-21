@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace AngularTemplate.Domain.Interfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository: IRepository<User>
     {
         IEnumerable<User> GetAll();
+
     }
 }

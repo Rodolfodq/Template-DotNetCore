@@ -10,5 +10,6 @@ namespace AngularTemplate.Application.Interfaces
     public interface IUserService
     {
         List<UserViewModel> Get();
+        public bool Post(UserViewModel userViewModel);
     }
 }
