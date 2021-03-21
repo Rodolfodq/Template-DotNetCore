@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AngularTemplate.Data.Context;
+using AngularTemplate.IOC;
 
 namespace AngularTemplate
 {
@@ -27,6 +28,8 @@ namespace AngularTemplate
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<AngularTemplateContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("TemplateDb")).EnableSensitiveDataLogging());
+
+            NativeInjector.RegisterServices(services);
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

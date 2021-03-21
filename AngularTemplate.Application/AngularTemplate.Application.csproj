@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\AngularTemplate.Domain\AngularTemplate.Domain.csproj" />
   </ItemGroup>
 
 </Project>
