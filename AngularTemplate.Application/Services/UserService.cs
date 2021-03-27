@@ -33,6 +33,11 @@ namespace AngularTemplate.Application.Services
 
         public bool Post(UserViewModel userViewModel)
         { 
+            if(userViewModel.Id != Guid.Empty)
+            {
+                throw new Exception("UserId is must by empty");
+            }
+
             User _user = mapper.Map<User>(userViewModel);
 
             this.userRepository.Create(_user);
