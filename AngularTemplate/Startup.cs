@@ -10,6 +10,10 @@ using AngularTemplate.Data.Context;
 using AngularTemplate.IOC;
 using AngularTemplate.Application.AutoMapper;
 using AngularTemplate.Swagger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
+using AngularTemplate.Auth.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AngularTemplate
 {
@@ -34,6 +38,24 @@ namespace AngularTemplate
             NativeInjector.RegisterServices(services);
             services.AddAutoMapper(typeof(AutoMapperSetup));
             services.AddSwaggerConfiguration();
+
+            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -66,6 +88,9 @@ namespace AngularTemplate
             }
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

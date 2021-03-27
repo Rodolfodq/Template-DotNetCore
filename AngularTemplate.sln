@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularTemplate.Data", "Ang
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{726F8E08-6A3D-4E5E-9BF7-E94E61D3A30E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularTemplate.IOC", "AngularTemplate.IOC\AngularTemplate.IOC.csproj", "{E364742D-91EB-4D21-A3BF-622518129E0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularTemplate.IOC", "AngularTemplate.IOC\AngularTemplate.IOC.csproj", "{E364742D-91EB-4D21-A3BF-622518129E0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularTemplate.Swagger", "AngularTemplate.Swagger\AngularTemplate.Swagger.csproj", "{314CE305-9B17-4ADB-B55A-587FB26C66B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularTemplate.Swagger", "AngularTemplate.Swagger\AngularTemplate.Swagger.csproj", "{314CE305-9B17-4ADB-B55A-587FB26C66B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularTemplate.Auth", "AngularTemplate.Auth\AngularTemplate.Auth.csproj", "{69AD213F-8345-4BC4-A662-05108037A435}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{314CE305-9B17-4ADB-B55A-587FB26C66B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{314CE305-9B17-4ADB-B55A-587FB26C66B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{314CE305-9B17-4ADB-B55A-587FB26C66B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AD213F-8345-4BC4-A662-05108037A435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AD213F-8345-4BC4-A662-05108037A435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AD213F-8345-4BC4-A662-05108037A435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AD213F-8345-4BC4-A662-05108037A435}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{726F8E08-6A3D-4E5E-9BF7-E94E61D3A30E} = {4CAD947C-A3CD-4CE8-A75E-FFE49500D281}
 		{E364742D-91EB-4D21-A3BF-622518129E0B} = {726F8E08-6A3D-4E5E-9BF7-E94E61D3A30E}
 		{314CE305-9B17-4ADB-B55A-587FB26C66B5} = {726F8E08-6A3D-4E5E-9BF7-E94E61D3A30E}
+		{69AD213F-8345-4BC4-A662-05108037A435} = {726F8E08-6A3D-4E5E-9BF7-E94E61D3A30E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A6DF92E-D602-4BBB-81FA-0AF0F8C65BC2}

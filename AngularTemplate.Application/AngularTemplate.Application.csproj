@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AngularTemplate.Auth\AngularTemplate.Auth.csproj" />
     <ProjectReference Include="..\AngularTemplate.Domain\AngularTemplate.Domain.csproj" />
   </ItemGroup>
 
